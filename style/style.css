@@ -33,13 +33,16 @@ button {
 /* ... Your turn! ... */
 
 @media (min-width: 640px) {
-
+  nav {
+    position: fixed;
+    width: 100%;
+  }
   nav ul {
     background:var(--green);
     display:flex;
     justify-content: space-around;
     margin: 0;
-    padding: 0;
+    padding: 12px;
     list-style: none;
   }
   li a {
@@ -72,46 +75,99 @@ button {
     display:flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   section{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 60px;
+  }
+  .warp {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+  }
+  .grid {
+    justify-content: space-around;
+    text-align: center;
+    min-width: 100%;
   }
   .obstacles, .prizes, .apply{
     display:flex;
     text-align: center;
     text-shadow: 3px 3px gray;
     text-decoration: none;
-       flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
   }
   .obstacles {
+    flex-direction: column;
     background: var(--orange);
   }
-  .obstacles-group img {
+  .obstacles-group>article {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.7rem;
+    padding: 3rem;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+  }
+  .obstacles-group {
     background: var(--green);
   }
   .prizes {
+    flex-direction: column;
     background: var(--green);
   }
-  .prizes-group img {
-    border: 2px solid var(--yellow);
+  .prizes-group>article {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dashed var(--yellow);
+    padding:36px;
+    margin: 10px;
   }
   .apply {
     background:var(--blue);
   }
-  label input {
-  align-content: center;
+  label{
+    flex-direction: column;
   }
-  .username .email {
+  form {
+    flex-direction: column;
+    margin-bottom: 12px;
+    align-items: flex-start;
+    width: 500px;
+    padding: 10px;
+  }
+  label, input {
+    display:flex;
+  }
+  input {
+    color: white;
     background-color: var(--orange);
+    border-radius: 6px;
+    border:0;
+    padding: 10px;
+    width: 200%;
   }
   button {
     background: var(--yellow);
+    border-radius: 6px;
+    border:0;
+    padding: 12px 10px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 0 gray;
+    font-size:15px;
   }
   footer {
+    margin: auto;
+    padding: 24px;
     text-align: center;
     background: var(--yellow);
     color: black;
